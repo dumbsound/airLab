@@ -14,7 +14,7 @@ public class APIHandler {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    public List<AirportList> getAirportList() throws Exception {
+    public List<AirportList> getAirportList() {
 
         String url = Account.URL + "airports";
 
@@ -30,11 +30,12 @@ public class APIHandler {
             return Arrays.asList(response);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new Exception(e.getMessage());
         }
+
+        return new ArrayList<>();
     }
 
-    public List<SID> getSIDList(String icao) throws Exception {
+    public List<SID> getSIDList(String icao){
 
         System.out.println("icao: "+icao);
         String url = Account.URL+"sids/airport/"+icao;
@@ -57,7 +58,7 @@ public class APIHandler {
     }
 
 
-    public List<SID> getSIDListIcao(String icao) throws Exception {
+    public List<SID> getSIDListIcao(String icao){
 
         System.out.println("icao: "+icao);
         String url = Account.URL+"sids/airport/"+icao;

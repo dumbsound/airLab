@@ -12,12 +12,10 @@ import lombok.*;
 @AllArgsConstructor @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class Airport{
+public class Airport {
 
     private String uid;
     private String name;
     private double lat;
     private double lng;
-
-
 }

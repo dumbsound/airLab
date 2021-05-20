@@ -84,16 +84,16 @@ public class MyController {
 
                     String name = waypoint.getName();
 
-                    Set<String> nameList;
+                    Set<String> sidSetForThisWaypoint;
                     if(waypointMap.containsKey(name)) {
-                        nameList = waypointMap.get(name);
+                        sidSetForThisWaypoint = waypointMap.get(name);
                     }
                     else {
-                        nameList = new HashSet<>();
+                        sidSetForThisWaypoint = new HashSet<>();
                     }
 
-                    nameList.add(sid.getName());
-                    waypointMap.put(name, nameList);
+                    sidSetForThisWaypoint.add(sid.getName());
+                    waypointMap.put(name, sidSetForThisWaypoint);
 
                 }
             }

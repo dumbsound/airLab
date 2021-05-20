@@ -13,7 +13,6 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AirportList {
-
     private String uid;
     private String name;
     private String icao;
@@ -21,5 +20,4 @@ public class AirportList {
     private Double lng;
     private Integer alt;
     private String iata;
-
 }
